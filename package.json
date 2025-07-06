@@ -1,0 +1,31 @@
+{
+  "name": "claude-code-session-checker",
+  "version": "1.0.0",
+  "description": "Track Claude Code Max plan session usage and avoid hitting the 50 sessions/month limit",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "claude-code-session-checker": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "session",
+    "tracker",
+    "cli",
+    "anthropic"
+  ],
+  "author": "hasegawashun",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "files": [
+    "index.js",
+    "README.md"
+  ]
+}
