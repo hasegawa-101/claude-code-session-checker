@@ -1,6 +1,6 @@
 {
   "name": "claude-code-session-checker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Check Claude Code Max plan session usage and avoid hitting the 50 sessions/month limit",
   "main": "index.js",
   "type": "module",

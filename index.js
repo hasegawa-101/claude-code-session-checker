@@ -259,8 +259,5 @@ function main() {
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
-  main();
-}
-
-export { SessionTracker };
+// CLIツールとして実行
+main();
