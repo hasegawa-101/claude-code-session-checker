@@ -1,6 +1,7 @@
 # claude-code-session-checker
 
-Claude Code Max planのセッション使用量を可視化するCLIツールです。
+Claude Code Max planのセッション使用量を可視化するCLIツールです。  
+npxでインストール不要で即座に使用できます。
 
 ## 機能
 
@@ -11,22 +12,29 @@ Claude Code Max planのセッション使用量を可視化するCLIツールで
 
 ## インストール
 
-### ローカルインストール
+### npxで即座に実行（推奨）
 
 ```bash
-git clone <このリポジトリのURL>
-cd claude-code-session-checker
-npm install
-chmod +x index.js
-
-# グローバルにリンク（オプション）
-npm link
+# インストール不要で即座に実行
+npx claude-code-session-checker status
 ```
 
-### 直接実行
+### グローバルインストール
 
 ```bash
-node index.js status
+# 一度インストールして繰り返し使用
+npm install -g claude-code-session-checker
+
+# インストール後はコマンド名で実行可能
+claude-code-session-checker status
+```
+
+### プロジェクトローカルインストール
+
+```bash
+# プロジェクト内でのみ使用
+npm install claude-code-session-checker
+npx claude-code-session-checker status
 ```
 
 ## 使用方法
@@ -140,20 +148,26 @@ claude
 - 大量のセッションがある場合、初回読み込みに時間がかかることがあります
 - JSONLファイルが破損している場合はスキップされます
 
-## 開発
+## 開発・カストマイズ
 
-### デバッグモード
+### ソースコードの取得
 
 ```bash
-DEBUG=1 node index.js status
+# ソースコードを取得してカストマイズしたい場合
+npm pack claude-code-session-checker
+tar -xzf claude-code-session-checker-*.tgz
+cd package
+
+# または直接node_modulesからアクセス
+npm install claude-code-session-checker
+cd node_modules/claude-code-session-checker
 ```
 
-### ログ出力
-
-セッション解析の詳細ログが必要な場合：
+### ローカルでの開発
 
 ```bash
-node index.js status 2>&1 | tee session-debug.log
+# ローカルで開発する場合は直接実行
+node index.js status
 ```
 
 ## ライセンス
@@ -162,10 +176,17 @@ MIT License
 
 ## 貢献
 
-プルリクエストやイシューの報告を歓迎します。
+バグ報告や機能リクエストは、npmパッケージのメンテナーまでお連絡ください。
+
+### フィードバックの方法
+
+1. **Issue報告**: バグや改善提案
+2. **機能リクエスト**: 新機能の提案
+3. **使用例共有**: 他のユーザーに役立つ使い方
 
 ## 関連リンク
 
+- [npmパッケージ](https://www.npmjs.com/package/claude-code-session-checker)
 - [Claude Code 公式ドキュメント](https://docs.anthropic.com/en/docs/claude-code)
 - [Anthropic Max Plan](https://www.anthropic.com/pricing)
 
