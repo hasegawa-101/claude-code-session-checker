@@ -21,6 +21,14 @@
   ],
   "author": "hasegawa-101",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hasegawa-101/claude-code-session-checker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hasegawa-101/claude-code-session-checker/issues"
+  },
+  "homepage": "https://github.com/hasegawa-101/claude-code-session-checker#readme",
   "engines": {
     "node": ">=18.0.0"
   },
