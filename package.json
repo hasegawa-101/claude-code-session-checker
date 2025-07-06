@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "bin": {
-    "claude-code-session-checker": "./index.js"
+    "claude-code-session-checker": "index.js"
   },
   "scripts": {
     "start": "node index.js",
